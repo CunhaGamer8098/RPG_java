@@ -1,5 +1,6 @@
 package Personagens;
 
+import Itens.Item;
 import Personagens.Classes.Classes;
 
 public abstract class Personagem {
@@ -18,7 +19,7 @@ public abstract class Personagem {
     protected int stamina_atual;
     protected int mana_max;
     protected int mana_atual;
-    String equipamento_atual;
+    protected Item equipamento_atual;
     protected int def_fis; // Deixar para armaduras e equipamentos
     protected int def_mag; // Deixar para armaduras e equipamentos
 

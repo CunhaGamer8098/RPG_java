@@ -18,6 +18,8 @@ public class Armas extends Item {
 
     public Armas(ArmasListas arma){
 
+
+        this.nome = arma.nome;
         this.forca = arma.forca;
         this.destreza = arma.destreza;
         this.inteligencia = arma.inteligencia;;

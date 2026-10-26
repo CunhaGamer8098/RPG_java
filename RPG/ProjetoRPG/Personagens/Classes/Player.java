@@ -1,16 +1,19 @@
 package Personagens.Classes;
 import Personagens.Personagem;
 public class Player extends Personagem {
+
     // Atributos de Utilidade
     protected int vigor;
     protected int mente;
     protected int resistencia;
+
     // Atributos de Dano e desempenho
     protected int forca;
     protected int destreza;
     protected int inteligencia;
     protected int fe;
     protected int arcano;
+
     public Player(String nome, int[] posicao, Classes classe){
         super(nome, posicao, classe);
         // Define os Atributos do personagem

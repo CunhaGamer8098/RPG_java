@@ -1,18 +1,16 @@
 package Itens.Equipamentos;
 
 public enum TipoEquipamentos {
-    CAPACETE,
-    PEITORAL,
-    LUVAS,
-    CALCAS,
-    BOTAS;
+    CAPACETE(1),
+    PEITORAL(2),
+    LUVAS(3),
+    CALCAS(4),
+    BOTAS(5);
 
-    //Buffs
-    int forca;
-    int destreza;
-    int inteligencia;
-    int fe;
-    // atributos de defesa
-    int def_fis;
-    int def_mag;
+    int tipo;
+
+    TipoEquipamentos(int tipo){
+        this.tipo = tipo;
+    }
+
 }
