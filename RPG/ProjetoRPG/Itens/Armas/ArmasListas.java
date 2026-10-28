@@ -74,6 +74,8 @@ public enum ArmasListas {
 
     int modelo_ataque;
 
+    int codigo_item;
+
     ArmasListas(String nome, TipoArmas setor_arma, int forca, int destreza, int inteligencia, int fe, int alcance, int dano, int defesa, int codigo_item){
         this.nome = nome;
         this.setor_arma = setor_arma;
