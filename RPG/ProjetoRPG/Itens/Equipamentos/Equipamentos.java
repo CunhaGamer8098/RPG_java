@@ -14,6 +14,8 @@ public class Equipamentos extends Item {
     int def_mag;
     int tipo_equipamento;
 
+    int id_coisa;
+
     public Equipamentos(ListasEquipamentos equipamento){
         this.nome = equipamento.nome;
         this.forca = equipamento.forca;
@@ -23,6 +25,7 @@ public class Equipamentos extends Item {
         this.def_fis = equipamento.def_fis;
         this.def_mag = equipamento.def_mag;
         this.tipo_equipamento = equipamento.tipo_equipamento;
+        this.id_coisa = equipamento.codigo_item;
 
     }
 
