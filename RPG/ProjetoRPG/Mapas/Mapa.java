@@ -1,14 +1,17 @@
 package Mapas;
     // ID COISA
-    // 1 Player
-    // 2 NPC amigo
-    // 3 NPC inimigo
-    // 4 Item -- Isso significa enumerar os itens por códigos de Dois dígitos
+    // 0 Casa vazia que pode ser ocupada.
+    // 1 Blocos que não podem ser ultrapassados
+    // 2 Player
+    // 3 NPC amigo
+    // 4 NPC inimigo
+    // 5 Item -- Isso significa enumerar os itens por códigos de Dois dígitos
+    // 6 Portas para outros mapas
+
 public class Mapa {
-    //Categorizar e juntar os comodos existentes
-    TiposDeComodo c1, c2, c3, c4, c5, c6, c7, c8;
-    //Variável que categoriza o que está na posição do mapa, sendo esse alterado pelo turno
-    int id_coisa;
+    // Mapas serão criados a partir de uma matriz a qual é definida por zeros e 
+    // Variável que categoriza o que está na posição do mapa, sendo esse alterado pelo turno
+    int id_coisa_atual;
 
 
 }
