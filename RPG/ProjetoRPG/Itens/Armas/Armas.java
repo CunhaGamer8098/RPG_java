@@ -15,6 +15,7 @@ public class Armas extends Item {
     int defesa;
     // modelo ataque
     int modelo_ataque;
+    int id_coisa;
 
     public Armas(ArmasListas arma){
 
@@ -30,5 +31,6 @@ public class Armas extends Item {
         this.defesa = arma.defesa;
 
         this.modelo_ataque = arma.modelo_ataque;
+        this.id_coisa = arma.codigo_item;
     }
 }
