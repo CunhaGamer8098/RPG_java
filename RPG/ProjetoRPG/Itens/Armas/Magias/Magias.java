@@ -10,6 +10,7 @@ public class Magias extends Item {
     int dano;
     int defesa;
     int modelo_magia;
+    int id_coisa;
 
     public Magias(MagiasListas magia){
         this.nome = magia.nome;
@@ -19,6 +20,7 @@ public class Magias extends Item {
         this.dano = magia.dano;
         this.defesa = magia.defesa;
         this.modelo_magia = magia.modelo_magia;
+        this.id_coisa = magia.codigo_item;
 
     }
 
