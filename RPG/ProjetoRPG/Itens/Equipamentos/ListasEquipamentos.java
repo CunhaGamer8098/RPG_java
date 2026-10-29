@@ -91,7 +91,7 @@ public enum ListasEquipamentos {
     // Hoslow's Set
     CAPACETE_HOSLOW("Capacete de Hoslow", TipoEquipamentos.CAPACETE, 20, 20, 0, 0, 29, 31, 103),
     PEITORAL_HOSLOW("Peitoral de Hoslow", TipoEquipamentos.PEITORAL, 20, 20, 0, 0, 29, 31, 104),
-    LUVAS_HOSLOW("Luvas de Hoslow", TipoEquipamentos.LUVAS, 20, 20, 0, 0, 29, 31. 105),
+    LUVAS_HOSLOW("Luvas de Hoslow", TipoEquipamentos.LUVAS, 20, 20, 0, 0, 29, 31, 105),
     CALCAS_HOSLOW("Calças de Hoslow", TipoEquipamentos.CALCAS, 20, 20, 0, 0, 29, 31, 106),
     BOTAS_HOSLOW("Botas de Hoslow", TipoEquipamentos.BOTAS, 20, 20, 0, 0, 29, 31, 107),
 
@@ -203,7 +203,7 @@ public enum ListasEquipamentos {
     int def_mag;
     int tipo_equipamento;
 
-    int codigo_item
+    int codigo_item;
 
     ListasEquipamentos(String nome, TipoEquipamentos equipamento, int forca, int destreza, int inteligencia, int fe, int def_fis, int def_mag, int codigo_item){
         this.nome = nome;

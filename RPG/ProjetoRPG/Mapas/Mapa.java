@@ -12,6 +12,15 @@ public class Mapa {
     // Mapas serão criados a partir de uma matriz a qual é definida por zeros e 
     // Variável que categoriza o que está na posição do mapa, sendo esse alterado pelo turno
     int id_coisa_atual;
+    int[][] posicao_coisa_atual;
+    int[][] mapa;
+
+    public Mapa(TiposDeMapa mapa){
+        this.id_coisa_atual = 0;
+        this.posicao_coisa_atual = new int[0][0];
+        this.mapa = mapa.matriz;
+
+    }
 
 
 }
