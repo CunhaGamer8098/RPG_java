@@ -2,7 +2,7 @@ package Itens.Equipamentos;
 
 import Itens.Item;
 
-public class Equipamentos extends Item {
+public class Equipamentos {
     String nome;
     //Buffs
     int forca;

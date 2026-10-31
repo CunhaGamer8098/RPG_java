@@ -2,7 +2,7 @@ package Itens.Armas;
 
 import Itens.Item;
 
-public class Armas extends Item {
+public class Armas {
     String nome;
     int  forca;
     int destreza;
@@ -33,4 +33,5 @@ public class Armas extends Item {
         this.modelo_ataque = arma.modelo_ataque;
         this.id_coisa = arma.codigo_item;
     }
+    Armas espada_longa = new Armas(ArmasListas.ESPADA_LONGA);
 }

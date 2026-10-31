@@ -87,7 +87,7 @@ public enum ArmasListas {
         this.dano = dano;
         this.defesa = defesa;
         this.modelo_ataque = setor_arma.modelo_ataque;
-        this.codigo_item = codigo_item
+        this.codigo_item = codigo_item;
 
     }
 }

@@ -1,15 +1,33 @@
 package Itens;
-import Itens.Armas.TipoArmas;
-import Itens.Equipamentos.TipoEquipamentos;
-public abstract class Item{
+import Itens.Armas.Armas;
+import Itens.Armas.ArmasListas;
+import Itens.Equipamentos.Equipamentos;
+import Itens.Equipamentos.ListasEquipamentos;
+import Personagens.Classes.Classes;
+
+public class Item{
     //Variável de durabilidade,
-    protected int durabilidade;
+    //protected int durabilidade;
     //armas e armaduras equipados
-    protected TipoArmas arma_atual_dir;
-    protected TipoArmas arma_atual_esq;
-    protected TipoEquipamentos capacete_atual;
-    protected TipoEquipamentos peitoral_atual;
-    protected TipoEquipamentos luvas_atual;
-    protected TipoEquipamentos calcas_atual;
-    protected TipoEquipamentos botas_atual;
+    protected Armas arma_atual_dir;
+    protected Armas arma_atual_esq;
+    protected Equipamentos capacete_atual;
+    protected Equipamentos peitoral_atual;
+    protected Equipamentos luvas_atual;
+    protected Equipamentos calcas_atual;
+    protected Equipamentos botas_atual;
+
+    public Item(Armas arma_atual_dir, Armas arma_atual_esq, Equipamentos capacete_atual, Equipamentos peitoral_atual, Equipamentos luvas_atual, Equipamentos calcas_atual, Equipamentos botas_atual){
+        this.arma_atual_dir = arma_atual_dir;
+        this.arma_atual_esq = arma_atual_esq;
+        this.capacete_atual = capacete_atual;
+        this.peitoral_atual = peitoral_atual;
+        this.luvas_atual = luvas_atual;
+        this.calcas_atual = calcas_atual;
+        this.botas_atual = botas_atual;
+
+    }
+    // Arrumar
+
+    public static final Item classe_Vagabundo = new Item(Armas espada_longa, ArmasListas.ALABARDA_BANIMENTO, ListasEquipamentos.CAPACETE_VAGABOND, ListasEquipamentos.PEITORAL_VAGABOND, ListasEquipamentos.LUVAS_VAGABOND, ListasEquipamentos.CALCAS_VAGABOND, ListasEquipamentos.BOTAS_VAGABOND);
 }
