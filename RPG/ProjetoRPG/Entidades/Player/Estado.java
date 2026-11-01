@@ -1,4 +1,4 @@
-package Personagens;
+package Entidades.Player;
 
 public enum Estado {
     MORTO,

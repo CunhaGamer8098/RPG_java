@@ -1,8 +1,8 @@
 package Itens.Armas.Magias;
 
-import Itens.Item;
+import Itens.Equipados;
 
-public class Magias extends Item {
+public class Magias {
     String nome;
     int inteligencia;
     int fe;

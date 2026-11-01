@@ -1,7 +1,7 @@
-package Personagens;
+package Entidades.Player;
 
-import Itens.Item;
-import Personagens.Classes.Classes;
+import Itens.Equipados;
+import Entidades.Player.Classes.Classes;
 
 public abstract class Personagem {
 
@@ -12,18 +12,18 @@ public abstract class Personagem {
     protected int nivel;
     protected int expericencia;
     protected Classes classe_personagem;
-    protected int[][] posicao;
+    public int[] posicao;
     protected int vida_max;
     protected int vida_atual;
     protected int stamina_max;
     protected int stamina_atual;
     protected int mana_max;
     protected int mana_atual;
-    protected Item equipamento_atual;
+    protected Equipados equipamento_atual;
     protected int def_fis; // Deixar para armaduras e equipamentos
     protected int def_mag; // Deixar para armaduras e equipamentos
 
-    public Personagem(String nome, int[][] posicao, Classes classe){
+    public Personagem(String nome, int[] posicao, Classes classe){
         this.nome = nome;
         this.posicao = posicao;
         this.classe_personagem = classe;

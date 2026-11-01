@@ -1,0 +1,141 @@
+package Entidades.NPCs.Inimigos.Dummys;
+
+import Itens.KitsPredefinidos;
+
+public enum Lista_Inimigos{
+
+    GODRICK_SOLDIER("Godrick Soldier", 854, 74, 0, 60, 83, 300, 0.04f, KitsPredefinidos.SOLDADO_ESPADA_KIT),
+    GODRICK_KNIGHT("Godrick Knight", 2414, 185, 0, 123, 93, 4033, 0.15f, KitsPredefinidos.CAVALEIRO_PESADO_KIT),
+    LEYNDELL_SOLDIER("Leyndell Soldier", 1113, 129, 0, 62, 78, 82, 0.05f, KitsPredefinidos.SOLDADO_ESPADA_KIT),
+    LEYNDELL_KNIGHT("Leyndell Knight", 1622, 173, 0, 106, 97, 3465, 0.13f, KitsPredefinidos.CAVALEIRO_PESADO_KIT),
+    RADAHN_SOLDIER("Radahn Soldier", 227, 131, 0, 66, 82, 479, 0.07f, KitsPredefinidos.SOLDADO_ESPADA_KIT),
+    RADAHN_FOOT_SOLDIER("Radahn Foot Soldier", 425, 117, 0, 78, 68, 56, 0.08f, KitsPredefinidos.SOLDADO_LANCA_KIT),
+    HALIGTREE_SOLDIER("Haligtree Soldier", 977, 80, 0, 82, 73, 334, 0.04f, KitsPredefinidos.SOLDADO_LANCA_KIT),
+    HALIGTREE_KNIGHT("Haligtree Knight", 2136, 205, 0, 130, 100, 1379, 0.06f, KitsPredefinidos.CAVALEIRO_CARIA_KIT),
+    RAYA_LUCARIA_SOLDIER("Raya Lucaria Soldier", 589, 72, 0, 71, 87, 320, 0.04f, KitsPredefinidos.SOLDADO_LANCA_KIT),
+    CUCKOO_KNIGHT("Cuckoo Knight", 1677, 267, 168, 103, 102, 3261, 0.06f, KitsPredefinidos.CAVALEIRO_CARIA_KIT),
+    REDMANE_KNIGHT("Redmane Knight", 2700, 242, 0, 118, 96, 1187, 0.06f, KitsPredefinidos.CAVALEIRO_PESADO_KIT),
+    BANISHED_KNIGHT("Banished Knight", 4208, 208, 0, 124, 99, 4503, 0.06f, KitsPredefinidos.CAVALEIRO_NEGRO_KIT),
+    EXILE_SOLDIER("Exile Soldier", 438, 72, 0, 72, 68, 423, 0.05f, KitsPredefinidos.SOLDADO_ESPADA_KIT),
+    MAUSOLEUM_SOLDIER("Mausoleum Soldier", 366, 107, 0, 71, 66, 323, 0.07f, KitsPredefinidos.SOLDADO_LANCA_KIT),
+    MAUSOLEUM_KNIGHT("Mausoleum Knight", 4374, 168, 0, 119, 110, 3187, 0.07f, KitsPredefinidos.CAVALEIRO_PESADO_KIT),
+    VULGAR_MILITIA("Vulgar Militia", 4986, 242, 0, 95, 94, 1905, 0.11f, KitsPredefinidos.MILICIA_KIT),
+    KAIDEN_SELLSWORD("Kaiden Sellsword", 5790, 236, 0, 111, 90, 1738, 0.05f, KitsPredefinidos.MERCENARIO_KIT),
+    PERFUMER("Perfumer", 2483, 54, 260, 82, 118, 1364, 0.04f, KitsPredefinidos.PERFUMISTA_KIT),
+    DEPRAVED_PERFUMER("Depraved Perfumer", 1961, 90, 234, 90, 125, 2379, 0.09f, KitsPredefinidos.PERFUMISTA_KIT),
+    BATTLEMAGE("Battlemage", 2585, 247, 0, 94, 87, 3859, 0.09f, KitsPredefinidos.BATALHA_MAGICA_KIT),
+    FIRE_MONK("Fire Monk", 1997, 104, 329, 82, 121, 1066, 0.06f, KitsPredefinidos.MONGE_FOGO_KIT),
+    BLACKFLAME_MONK("Blackflame Monk", 1843, 113, 203, 94, 111, 1126, 0.04f, KitsPredefinidos.MONGE_FOGO_KIT),
+    FIRE_PRELATE("Fire Prelate", 4070, 190, 187, 113, 109, 2576, 0.06f, KitsPredefinidos.PRELADO_KIT),
+    NOX_MONK("Nox Monk", 1581, 109, 315, 78, 127, 969, 0.03f, KitsPredefinidos.MAGO_NOX_KIT),
+    NOX_SWORDSTRESS("Nox Swordstress", 2196, 118, 248, 94, 130, 956, 0.08f, KitsPredefinidos.ESPADACHIM_NOX_KIT),
+    NOX_NIGHTMAIDEN("Nox Nightmaiden", 1401, 105, 220, 84, 110, 2550, 0.07f, KitsPredefinidos.MAGO_NOX_KIT),
+    PAGE("Page", 5120, 225, 0, 106, 109, 3361, 0.06f, KitsPredefinidos.SOLDADO_ESPADA_KIT),
+    NOBLE("Noble", 505, 141, 0, 76, 79, 206, 0.03f, KitsPredefinidos.NOBRE_KIT),
+    WANDERING_NOBLE("Wandering Noble", 582, 80, 0, 77, 90, 593, 0.08f, KitsPredefinidos.NOBRE_KIT),
+    COMMONER("Commoner", 1140, 60, 0, 79, 70, 69, 0.05f, KitsPredefinidos.CAMPONES_KIT),
+    INQUISITOR("Inquisitor", 2458, 272, 0, 118, 106, 1780, 0.09f, KitsPredefinidos.LAMINA_SOMBRA_KIT),
+    HORNED_WARRIOR("Horned Warrior", 1737, 211, 0, 128, 108, 1350, 0.06f, KitsPredefinidos.GUERREIRO_CHIFRUDO_KIT),
+    BLACK_KNIGHT("Black Knight", 4497, 274, 0, 126, 92, 4136, 0.13f, KitsPredefinidos.CAVALEIRO_NEGRO_KIT),
+    FIRE_KNIGHT("Fire Knight", 2015, 182, 184, 115, 107, 2085, 0.07f, KitsPredefinidos.CAVALEIRO_FOGO_KIT),
+    MESSMER_SOLDIER("Messmer Soldier", 740, 137, 0, 73, 90, 255, 0.03f, KitsPredefinidos.SOLDADO_LANCA_KIT),
+    DIVINE_BEAST_WARRIOR("Divine Beast Warrior", 4420, 229, 0, 112, 110, 2794, 0.1f, KitsPredefinidos.BESTA_DIVINA_KIT),
+    DIVINE_BIRD_WARRIOR("Divine Bird Warrior", 3619, 265, 0, 103, 97, 1262, 0.08f, KitsPredefinidos.AVE_DIVINA_KIT),
+    BLOODFIEND("Bloodfiend", 3384, 185, 0, 108, 97, 3210, 0.08f, KitsPredefinidos.LAMINA_SOMBRA_KIT),
+    BLOODFIEND_HEXER("Bloodfiend Hexer", 1251, 50, 198, 92, 130, 1437, 0.03f, KitsPredefinidos.MAGO_SANGUE_KIT),
+    CURSEBLADE("Curseblade", 2276, 188, 0, 117, 90, 2905, 0.06f, KitsPredefinidos.LAMINA_SOMBRA_KIT),
+    WOLF("Wolf", 443, 95, 0, 81, 75, 185, 0.03f, KitsPredefinidos.NENHUM_KIT),
+    DIREWOLF("Direwolf", 4962, 301, 0, 97, 105, 2467, 0.12f, KitsPredefinidos.NENHUM_KIT),
+    DOG("Dog", 394, 72, 0, 63, 81, 412, 0.05f, KitsPredefinidos.NENHUM_KIT),
+    MONSTROUS_DOG("Monstrous Dog", 633, 112, 0, 74, 87, 105, 0.07f, KitsPredefinidos.NENHUM_KIT),
+    EAGLE("Eagle", 4758, 205, 0, 91, 92, 1247, 0.1f, KitsPredefinidos.NENHUM_KIT),
+    GIANT_EAGLE("Giant Eagle", 3018, 229, 0, 96, 97, 1374, 0.12f, KitsPredefinidos.NENHUM_KIT),
+    GIANT_RAT("Giant Rat", 632, 83, 0, 68, 74, 127, 0.03f, KitsPredefinidos.NENHUM_KIT),
+    BEAR("Bear", 3815, 320, 0, 93, 81, 1182, 0.05f, KitsPredefinidos.NENHUM_KIT),
+    LESSER_RUNEBEAR("Lesser Runebear", 5794, 240, 0, 95, 93, 2771, 0.12f, KitsPredefinidos.NENHUM_KIT),
+    CRAB("Crab", 2875, 282, 0, 118, 81, 2352, 0.07f, KitsPredefinidos.NENHUM_KIT),
+    GIANT_CRAB("Giant Crab", 2008, 279, 0, 98, 109, 1968, 0.12f, KitsPredefinidos.NENHUM_KIT),
+    GIANT_CRAYFISH("Giant Crayfish", 3732, 304, 0, 94, 86, 1691, 0.09f, KitsPredefinidos.NENHUM_KIT),
+    LAND_OCTOPUS("Land Octopus", 5967, 194, 0, 108, 103, 3863, 0.05f, KitsPredefinidos.NENHUM_KIT),
+    GIANT_LAND_OCTOPUS("Giant Land Octopus", 3284, 194, 0, 91, 98, 2859, 0.12f, KitsPredefinidos.NENHUM_KIT),
+    DEER("Deer", 5765, 315, 0, 95, 81, 1561, 0.06f, KitsPredefinidos.NENHUM_KIT),
+    BOAR("Boar", 2280, 197, 0, 111, 107, 2453, 0.08f, KitsPredefinidos.NENHUM_KIT),
+    GIANT_DRAGONFLY("Giant Dragonfly", 2491, 243, 0, 108, 99, 3336, 0.05f, KitsPredefinidos.NENHUM_KIT),
+    GIANT_BAT("Giant Bat", 2335, 287, 0, 111, 98, 1868, 0.1f, KitsPredefinidos.NENHUM_KIT),
+    OPERATIC_BAT("Operatic Bat", 2836, 260, 0, 97, 88, 1336, 0.11f, KitsPredefinidos.NENHUM_KIT),
+    GIANT_ANT("Giant Ant", 4751, 256, 0, 104, 90, 838, 0.06f, KitsPredefinidos.NENHUM_KIT),
+    BASILISK("Basilisk", 3877, 205, 0, 92, 97, 2872, 0.08f, KitsPredefinidos.NENHUM_KIT),
+    FINGERCREEPER("Fingercreeper", 3086, 213, 0, 119, 91, 1800, 0.06f, KitsPredefinidos.NENHUM_KIT),
+    GIANT_FINGERCREEPER("Giant Fingercreeper", 3513, 252, 0, 95, 94, 3305, 0.09f, KitsPredefinidos.NENHUM_KIT),
+    MAN_FLY("Man-Fly", 5305, 315, 0, 90, 101, 3517, 0.09f, KitsPredefinidos.NENHUM_KIT),
+    LAMPREY("Lamprey", 2424, 214, 0, 98, 83, 3840, 0.06f, KitsPredefinidos.NENHUM_KIT),
+    MIRANDA_SPROUT("Miranda Sprout", 766, 79, 0, 68, 69, 265, 0.06f, KitsPredefinidos.NENHUM_KIT),
+    GIANT_MIRANDA_SPROUT("Giant Miranda Sprout", 934, 103, 0, 66, 81, 320, 0.07f, KitsPredefinidos.NENHUM_KIT),
+    LAND_SQUIRT("Land Squirt", 4070, 305, 0, 98, 108, 1178, 0.05f, KitsPredefinidos.NENHUM_KIT),
+    GIANT_LAND_SQUIRT("Giant Land Squirt", 4598, 288, 0, 116, 88, 814, 0.05f, KitsPredefinidos.NENHUM_KIT),
+    LIVING_MAGMA("Living Magma", 3366, 213, 0, 110, 88, 3836, 0.07f, KitsPredefinidos.NENHUM_KIT),
+    WORMFACE("Wormface", 3809, 289, 0, 107, 80, 1108, 0.06f, KitsPredefinidos.NENHUM_KIT),
+    REVENANT_FOLLOWER("Revenant Follower", 5870, 218, 0, 107, 81, 3185, 0.1f, KitsPredefinidos.ESQUELETO_KIT),
+    ROYAL_REVENANT("Royal Revenant", 4263, 217, 0, 103, 84, 2062, 0.05f, KitsPredefinidos.ESQUELETO_KIT),
+    KINDRED_OF_ROT("Kindred of Rot", 3493, 190, 0, 118, 91, 3593, 0.08f, KitsPredefinidos.NENHUM_KIT),
+    ROT_LARVA("Rot Larva", 3022, 206, 0, 101, 104, 3342, 0.11f, KitsPredefinidos.NENHUM_KIT),
+    GIANT_CROW("Giant Crow", 5069, 219, 0, 119, 109, 1465, 0.08f, KitsPredefinidos.NENHUM_KIT),
+    GIANT_DOG("Giant Dog", 1199, 82, 0, 88, 73, 233, 0.02f, KitsPredefinidos.NENHUM_KIT),
+    GRAVEBIRD("Gravebird", 5016, 265, 0, 115, 109, 3543, 0.11f, KitsPredefinidos.NENHUM_KIT),
+    SKELETON("Skeleton", 1084, 91, 0, 68, 65, 160, 0.08f, KitsPredefinidos.ESQUELETO_KIT),
+    BEAST_SKELETON("Beast Skeleton", 591, 64, 0, 87, 75, 254, 0.03f, KitsPredefinidos.NENHUM_KIT),
+    PUTRID_CORPSE("Putrid Corpse", 5344, 297, 0, 101, 89, 1713, 0.08f, KitsPredefinidos.NENHUM_KIT),
+    ROTTEN_STRAY("Rotten Stray", 2096, 229, 0, 102, 90, 1084, 0.09f, KitsPredefinidos.NENHUM_KIT),
+    OMEN("Omen", 2643, 239, 0, 120, 106, 3783, 0.11f, KitsPredefinidos.NENHUM_KIT),
+    OMENKILLER("Omenkiller", 3696, 234, 0, 130, 90, 4592, 0.06f, KitsPredefinidos.BRUTO_KIT),
+    MISBEGOTTEN("Misbegotten", 5974, 246, 0, 95, 98, 956, 0.09f, KitsPredefinidos.NENHUM_KIT),
+    WINGED_MISBEGOTTEN("Winged Misbegotten", 2444, 291, 0, 101, 103, 2587, 0.1f, KitsPredefinidos.NENHUM_KIT),
+    MISBEGOTTEN_WARRIOR("Misbegotten Warrior", 3983, 280, 0, 103, 102, 1778, 0.14f, KitsPredefinidos.GUERREIRO_CHIFRUDO_KIT),
+    ALBINAURIC("Albinauric", 3043, 191, 0, 112, 93, 2929, 0.05f, KitsPredefinidos.NENHUM_KIT),
+    ELDER_ALBINAURIC("Elder Albinauric", 5791, 317, 0, 111, 103, 2291, 0.08f, KitsPredefinidos.NENHUM_KIT),
+    ALBINAURIC_ARCHER("Albinauric Archer", 3766, 197, 0, 120, 101, 3352, 0.1f, KitsPredefinidos.NENHUM_KIT),
+    ANCESTRAL_FOLLOWER("Ancestral Follower", 3285, 211, 0, 113, 108, 2877, 0.09f, KitsPredefinidos.NENHUM_KIT),
+    CLAYMAN("Clayman", 3266, 284, 0, 100, 92, 3070, 0.09f, KitsPredefinidos.NENHUM_KIT),
+    ORACLE_ENVOY("Oracle Envoy", 2521, 229, 0, 103, 101, 3574, 0.11f, KitsPredefinidos.NENHUM_KIT),
+    SILVER_TEAR("Silver Tear", 5064, 224, 0, 109, 98, 2463, 0.09f, KitsPredefinidos.NENHUM_KIT),
+    MIMIC_TEAR("Mimic Tear (inimigo_KIT)", 4244, 180, 0, 99, 89, 2560, 0.08f, KitsPredefinidos.NENHUM_KIT),
+    MAN_SERPENT("Man-Serpent", 5218, 262, 0, 104, 94, 3567, 0.12f, KitsPredefinidos.NENHUM_KIT);
+
+    //Inimigos fora dos padrões normais de desenvolvimento
+
+    // MARIONETTE_SOLDIER("Marionette Soldier", 418, 125, 0, 75, 85, 223, 0,08),
+    // AVIONETTE_SOLDIER("Avionette Soldier", 874, 70, 0, 69, 76, 393, 0,07),
+    // GUARDIAN_GOLEM("Guardian Golem", 2382, 240, 0, 111, 89, 1615, 0,08),
+    // GOLEM("Golem", 2603, 186, 0, 91, 87, 3303, 0,12),
+    // ERDTREE_GUARDIAN("Erdtree Guardian", 5480, 198, 0, 104, 93, 3742, 0,08),
+    // FLAME_CHARIOT("Flame Chariot", 4852, 278, 0, 105, 92, 1404, 0,08),
+    // ABDUCTOR_VIRGIN("Abductor Virgin", 4687, 181, 0, 118, 104, 3988, 0,06),
+    // CRYSTALIAN("Crystalian", 3741, 236, 0, 95, 105, 1005, 0,12),
+    // ERDTREE_BURIAL_WATCHDOG("Erdtree Burial Watchdog", 4283, 243, 0, 119, 107, 2669, 0,06),
+    // LIVING_JAR("Living Jar", 2546, 298, 0, 111, 96, 3893, 0,1),
+    // JAR_DWELLER("Jar Dweller", 5651, 293, 0, 109, 106, 3044, 0,11),
+    // GRAFTED_SCION("Grafted Scion", 3826, 220, 0, 113, 107, 2643, 0,12),
+    // FLYING_DRAGON("Flying Dragon", 12246, 442, 0, 127, 120, 48347, 0,1),
+    // ANCIENT_DRAGON("Ancient Dragon", 16540, 374, 360, 127, 108, 69654, 0,1),
+    // LESSER_DRAGON("Lesser Dragon", 9269, 432, 0, 129, 107, 47614, 0,1),
+    // GLINTSTONE_DRAGON("Glintstone Dragon", 13502, 331, 338, 122, 104, 31769, 0,1),
+    // MAGMA_WYRM("Magma Wyrm", 11788, 348, 377, 124, 106, 20418, 0,1),
+    // DRAGONKIN_SOLDIER("Dragonkin Soldier", 14797, 354, 0, 130, 117, 73069, 0,1);
+
+
+    String nome;
+    int vida, dano_fisico, dano_magico, defesa_fisica, defesa_magica, exp_drop;
+    float drop_rate;
+    KitsPredefinidos kit; // equipamento inicial (cada inimigo gera o seu com kit.criar())
+    Lista_Inimigos(String nome, int vida, int dan_fis, int dan_mag, int def_fis, int def_mag, int exp_drop, float drop_rate, KitsPredefinidos kit){
+        this.nome = nome;
+        this.vida = vida;
+        this.dano_fisico = dan_fis;
+        this.dano_magico = dan_mag;
+        this.defesa_fisica = def_fis;
+        this.defesa_magica = def_mag;
+        this.exp_drop = exp_drop;
+        this.drop_rate = drop_rate;
+        this.kit = kit;
+    }
+}

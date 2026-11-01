@@ -1,4 +1,4 @@
-package NPCs.Inimigos.Dummys;
+package Entidades.NPCs.Inimigos.Dummys;
 
 public enum Classes_Inimigos{
     INIMIGOS_NORMAIS(),

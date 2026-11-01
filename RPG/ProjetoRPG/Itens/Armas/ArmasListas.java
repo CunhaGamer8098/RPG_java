@@ -20,7 +20,7 @@ public enum ArmasListas {
     MACA("Maça", TipoArmas.MARTELOS, 12, 3, 0, 0, 1, 11, 2, 10),
     GRANDES_ESTRELAS("Meteoro", TipoArmas.MARTELOS, 18, 12, 6, 12, 2, 16, 3, 11),
     MARTELO_DO_PRELUDIO("Martelo do Prelúdio", TipoArmas.MARTELOS, 14, 10, 0, 0, 1, 12, 2, 12),
-    MARTELO_OLHOS_SOLTOS("Mareta do Zoio", TipoArmas.MARTELOS, 25, 18, -3, 0, 3, 21, 4, 13), //ZOIO REFERENCIA (2% DROPRATE CICLOPE)
+    MARTELO_OLHOS_SOLTOS("Marreta do Zoio", TipoArmas.MARTELOS, 25, 18, -3, 0, 3, 21, 4, 13), //ZOIO REFERENCIA (2% DROPRATE CICLOPE)
 
     // KATANAS
     UCHIGATANA("Uchigatana", TipoArmas.KATANAS, 10, 12, 12, 3, 2, 10, 1, 14),

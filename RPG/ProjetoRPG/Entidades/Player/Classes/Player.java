@@ -1,5 +1,7 @@
-package Personagens.Classes;
-import Personagens.Personagem;
+package Entidades.Player.Classes;
+import Entidades.Player.Personagem;
+import Itens.Equipados;
+
 public class Player extends Personagem {
 
     // Atributos de Utilidade
@@ -13,6 +15,10 @@ public class Player extends Personagem {
     protected int inteligencia;
     protected int fe;
     protected int arcano;
+
+    //Itens e Inventário
+    protected Equipados equipados;
+    //protected Inventario inventario;
 
     public Player(String nome, int[] posicao, Classes classe){
         super(nome, posicao, classe);
@@ -34,7 +40,14 @@ public class Player extends Personagem {
         this.mana_max = (this.mente*25);
         this.mana_atual = this.mana_max;
         this.nivel = classe.nivel;
+
+        this.equipados = classe.kit.criar();
+        //this.inventario =
     }
+    public void movimentar(int eixoX, int eixoY){
+
+    }
+
     // TESTE DE FUNCIONAMENTO CÓDIGO VIA IA
     public void printarDados() {
         System.out.println("========================================");

@@ -1,4 +1,4 @@
-package NPCs.Inimigos.Bosses;
+package Entidades.NPCs.Inimigos.Bosses;
 
 //Classe que vai definir o modelo de ataque dos bosses
 //Tamanho

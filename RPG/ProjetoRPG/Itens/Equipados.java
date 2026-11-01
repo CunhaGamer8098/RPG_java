@@ -3,9 +3,8 @@ import Itens.Armas.Armas;
 import Itens.Armas.ArmasListas;
 import Itens.Equipamentos.Equipamentos;
 import Itens.Equipamentos.ListasEquipamentos;
-import Personagens.Classes.Classes;
 
-public class Item{
+public class Equipados {
     //Variável de durabilidade,
     //protected int durabilidade;
     //armas e armaduras equipados
@@ -17,7 +16,7 @@ public class Item{
     protected Equipamentos calcas_atual;
     protected Equipamentos botas_atual;
 
-    public Item(Armas arma_atual_dir, Armas arma_atual_esq, Equipamentos capacete_atual, Equipamentos peitoral_atual, Equipamentos luvas_atual, Equipamentos calcas_atual, Equipamentos botas_atual){
+    public Equipados(Armas arma_atual_dir, Armas arma_atual_esq, Equipamentos capacete_atual, Equipamentos peitoral_atual, Equipamentos luvas_atual, Equipamentos calcas_atual, Equipamentos botas_atual){
         this.arma_atual_dir = arma_atual_dir;
         this.arma_atual_esq = arma_atual_esq;
         this.capacete_atual = capacete_atual;
@@ -29,5 +28,4 @@ public class Item{
     }
     // Arrumar
 
-    public static final Item classe_Vagabundo = new Item(Armas espada_longa, ArmasListas.ALABARDA_BANIMENTO, ListasEquipamentos.CAPACETE_VAGABOND, ListasEquipamentos.PEITORAL_VAGABOND, ListasEquipamentos.LUVAS_VAGABOND, ListasEquipamentos.CALCAS_VAGABOND, ListasEquipamentos.BOTAS_VAGABOND);
 }

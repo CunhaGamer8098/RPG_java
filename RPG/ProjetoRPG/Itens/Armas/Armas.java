@@ -1,7 +1,5 @@
 package Itens.Armas;
 
-import Itens.Item;
-
 public class Armas {
     String nome;
     int  forca;
@@ -33,5 +31,5 @@ public class Armas {
         this.modelo_ataque = arma.modelo_ataque;
         this.id_coisa = arma.codigo_item;
     }
-    Armas espada_longa = new Armas(ArmasListas.ESPADA_LONGA);
+    //public Armas espada_longa = new Armas(ArmasListas.ESPADA_LONGA);
 }

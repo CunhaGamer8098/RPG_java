@@ -1,4 +1,4 @@
-package NPCs.Inimigos.Bosses;
+package Entidades.NPCs.Inimigos.Bosses;
 
 public enum Lista_Bosses{
     MARGIT_THE_FELL_OMEN("Margit, the Fell Omen", 10812, 331, 52, 136, 134, 11280),
