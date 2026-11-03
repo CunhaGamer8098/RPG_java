@@ -8,12 +8,12 @@ import Mapas.TiposDeMapa;
 public class Main {
     public static void main(String[] args){
 
-        Player kenan = new Player("kenan", new int[]{4, 4}, Classes.BANDIDO);
+        Player kenan = new Player("kenan", new int[]{10, 10}, Classes.BANDIDO);
         kenan.printarDados();
 
-        Mapa cenario1 = new Mapa(TiposDeMapa.BOSQUE_SOMBRIO);
+        Mapa cenario1 = new Mapa(TiposDeMapa.ARENA_DOS_CAMPEOES);
         cenario1.posicionarPlayer(kenan);
-        kenan.esquerda();
+        kenan.direita();
         cenario1.posicionarPlayer(kenan);
     }
 

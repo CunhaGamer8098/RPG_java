@@ -7,7 +7,9 @@ package Mapas;
     // 4 NPC inimigo
     // 5 Item -- Isso significa enumerar os itens por códigos de Dois dígitos
     // 6 Portas para outros mapas
+    // 7 Casas que estão sofrendo ataque de armas
 
+import Entidades.Entidades;
 import Entidades.Player.Classes.Player;
 import Entidades.Player.Personagem;
 
@@ -15,27 +17,25 @@ public class Mapa {
     // Mapas serão criados a partir de uma matriz a qual é definida por zeros e 
     // Variável que categoriza o que está na posição do mapa, sendo esse alterado pelo turno
     int quantidade_de_entidades;
-    int[] posicao_coisa_atual;
-    int[][] mapa;
+    Entidades[] lista_criaturas_no_mapa;
+    int[][] mapa_antigo;
+    int[][] mapa_atual;
 
     public Mapa(TiposDeMapa mapa){
         this.quantidade_de_entidades = 0;
-        this.posicao_coisa_atual = new int[]{0,0};
-        this.mapa = mapa.matriz.clone();
+        this.lista_criaturas_no_mapa = null;
+        this.mapa_antigo = mapa.matriz;
+        this.mapa_atual = new int [20][20];
 
     }
-    public void verificar_posicoes(){
-        // verificar se existe algo vivo ou item dentro do mapa atual
-        // caso tenha conferir suas posições e atualizar, mantendo o estado original
-    }
     public void desenhar_mapa(){
-        for (int i = 0; this.mapa.length > i; i++){
-            for (int j  = 0; this.mapa[i].length > j; j++){
-                if (mapa[i][j] == 0){
+        for (int i = 0; this.mapa_atual.length > i; i++){
+            for (int j  = 0; this.mapa_atual[i].length > j; j++){
+                if (mapa_atual[i][j] == 0){
                     System.out.print("____");
-                } else if (mapa[i][j] == 6) {
+                } else if (mapa_atual[i][j] == 6) {
                     System.out.print("[bd]");
-                } else if (mapa[i][j] == 2) {
+                } else if (mapa_atual[i][j] == 2) {
                     System.out.print("-P1-");
                 }
                 else {
@@ -45,15 +45,7 @@ public class Mapa {
             System.out.println();
         }
     }
-    public void resetarMapa(){
-        for (int i = 0; this.mapa.length > i; i++) {
-            for (int j = 0; this.mapa[i].length > j; j++) {
-                if (mapa[i][j] != 0 && mapa[i][j] != 1) {
-                    mapa[i][j] = 0;
-                }
-            }
-        }
-    }
+    //Transformar a partir do for na lista de criaturas do mapa
     public void posicionarPlayer(Player pessoa) {
 
         int y = pessoa.posicao[0];
@@ -61,7 +53,7 @@ public class Mapa {
 
         this.resetarMapa();
 
-        while (this.mapa[y][x] == 1){
+        while (this.mapa_atual[y][x] == 1){
 
             // tenta valores brancos da esquerda e direita
             if (pessoa.posicao[0]+1<10){
@@ -83,12 +75,29 @@ public class Mapa {
                 x = pessoa.posicao[0];
             }
         }
-        if (this.mapa[x][y] == 0) {
-            this.mapa[x][y] = 2;
+        if (this.mapa_atual[x][y] == 0) {
+            this.mapa_atual[x][y] = 2;
         }
         this.desenhar_mapa();
 
     }
-
-
+    public void resetarMapa(){
+        for (int i = 0; this.mapa_antigo.length > i; i++){
+            this.mapa_atual[i] = this.mapa_antigo[i].clone();
+        }
+    }
+    public void adicionarAoMapa(Entidades entidade){
+        this.quantidade_de_entidades = this.quantidade_de_entidades + 1;
+        this.lista_criaturas_no_mapa[this.quantidade_de_entidades-1] = entidade;
+    }
+    public void posicionarEntidades(){
+        for (int i = 0; lista_criaturas_no_mapa.length > i; i++){
+            int y = this.lista_criaturas_no_mapa[i].posicao[0];
+            int x = this.lista_criaturas_no_mapa[i].pessoa.posicao[1];
+            if (this.mapa_atual[x][y] == 0) {
+                this.mapa_atual[x][y] = 2;
+            }
+            this.desenhar_mapa();
+        }
+    }
 }
