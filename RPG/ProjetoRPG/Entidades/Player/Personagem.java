@@ -32,18 +32,18 @@ public abstract class Personagem {
         this.expericencia = 0;
     }
 
-    public void subir(){
-        this.posicao[1] = this.posicao[1] + 1;
+    public void direita(){
+        this.posicao[1] = this.posicao[0] + 1;
         // mapa atual apaga antiga posição do player
     }
-    public void descer(){
-        this.posicao[1] = this.posicao[1] - 1;
-    }
     public void esquerda(){
-        this.posicao[0] = this.posicao[0] - 1;
+        this.posicao[1] = this.posicao[0] - 1;
     }
-    public void direita(){
-        this.posicao[0] = this.posicao[0] + 1;
+    public void descer(){
+        this.posicao[0] = this.posicao[1] - 1;
+    }
+    public void subir(){
+        this.posicao[0] = this.posicao[1] + 1;
     }
 
 

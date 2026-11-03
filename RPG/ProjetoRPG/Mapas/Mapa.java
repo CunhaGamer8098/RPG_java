@@ -16,14 +16,12 @@ public class Mapa {
     // Variável que categoriza o que está na posição do mapa, sendo esse alterado pelo turno
     int quantidade_de_entidades;
     int[] posicao_coisa_atual;
-    static int[][] mapa_antigo;
-    int[][] mapa_atual;
+    int[][] mapa;
 
     public Mapa(TiposDeMapa mapa){
         this.quantidade_de_entidades = 0;
         this.posicao_coisa_atual = new int[]{0,0};
-        this.mapa_antigo = mapa.matriz;
-        this.mapa_atual = mapa.matriz;
+        this.mapa = mapa.matriz.clone();
 
     }
     public void verificar_posicoes(){
@@ -31,13 +29,13 @@ public class Mapa {
         // caso tenha conferir suas posições e atualizar, mantendo o estado original
     }
     public void desenhar_mapa(){
-        for (int i = 0; this.mapa_atual.length > i; i++){
-            for (int j  = 0; this.mapa_atual[i].length > j; j++){
-                if (mapa_atual[i][j] == 0){
+        for (int i = 0; this.mapa.length > i; i++){
+            for (int j  = 0; this.mapa[i].length > j; j++){
+                if (mapa[i][j] == 0){
                     System.out.print("____");
-                } else if (mapa_atual[i][j] == 6) {
+                } else if (mapa[i][j] == 6) {
                     System.out.print("[bd]");
-                } else if (mapa_atual[i][j] == 2) {
+                } else if (mapa[i][j] == 2) {
                     System.out.print("-P1-");
                 }
                 else {
@@ -47,14 +45,23 @@ public class Mapa {
             System.out.println();
         }
     }
+    public void resetarMapa(){
+        for (int i = 0; this.mapa.length > i; i++) {
+            for (int j = 0; this.mapa[i].length > j; j++) {
+                if (mapa[i][j] != 0 && mapa[i][j] != 1) {
+                    mapa[i][j] = 0;
+                }
+            }
+        }
+    }
     public void posicionarPlayer(Player pessoa) {
 
         int y = pessoa.posicao[0];
         int x = pessoa.posicao[1];
 
-        this.mapa_atual = this.mapa_antigo;
+        this.resetarMapa();
 
-        while (this.mapa_atual[y][x] == 1){
+        while (this.mapa[y][x] == 1){
 
             // tenta valores brancos da esquerda e direita
             if (pessoa.posicao[0]+1<10){
@@ -76,8 +83,8 @@ public class Mapa {
                 x = pessoa.posicao[0];
             }
         }
-        if (this.mapa_atual[x][y] == 0) {
-            this.mapa_atual[x][y] = 2;
+        if (this.mapa[x][y] == 0) {
+            this.mapa[x][y] = 2;
         }
         this.desenhar_mapa();
 
