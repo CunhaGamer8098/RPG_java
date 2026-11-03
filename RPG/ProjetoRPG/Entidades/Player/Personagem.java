@@ -20,8 +20,7 @@ public abstract class Personagem {
     protected int mana_max;
     protected int mana_atual;
     protected Equipados equipamento_atual;
-    protected int def_fis; // Deixar para armaduras e equipamentos
-    protected int def_mag; // Deixar para armaduras e equipamentos
+
 
     public Personagem(String nome, int[] posicao, Classes classe){
         this.nome = nome;
@@ -31,6 +30,20 @@ public abstract class Personagem {
         // Variáveis Comuns aos Personagens
         this.estado_atual = Estado.VIVO;
         this.expericencia = 0;
+    }
+
+    public void subir(){
+        this.posicao[1] = this.posicao[1] + 1;
+        // mapa atual apaga antiga posição do player
+    }
+    public void descer(){
+        this.posicao[1] = this.posicao[1] - 1;
+    }
+    public void esquerda(){
+        this.posicao[0] = this.posicao[0] - 1;
+    }
+    public void direita(){
+        this.posicao[0] = this.posicao[0] + 1;
     }
 
 

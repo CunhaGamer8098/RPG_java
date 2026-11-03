@@ -90,4 +90,8 @@ public enum ArmasListas {
         this.codigo_item = codigo_item;
 
     }
+    //public Armas espada_longa = new Armas(ArmasListas.ESPADA_LONGA);
+    public String getNome(){
+        return this.nome;
+    }
 }

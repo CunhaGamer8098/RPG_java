@@ -31,5 +31,4 @@ public class Armas {
         this.modelo_ataque = arma.modelo_ataque;
         this.id_coisa = arma.codigo_item;
     }
-    //public Armas espada_longa = new Armas(ArmasListas.ESPADA_LONGA);
 }

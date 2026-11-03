@@ -1,6 +1,8 @@
 package Entidades.Player.Classes;
 import Entidades.Player.Personagem;
+import Itens.Armas.ArmasListas;
 import Itens.Equipados;
+import Itens.Equipamentos.ListasEquipamentos;
 
 public class Player extends Personagem {
 
@@ -19,6 +21,11 @@ public class Player extends Personagem {
     //Itens e Inventário
     protected Equipados equipados;
     //protected Inventario inventario;
+
+
+    // variáveis para cada parte
+    ArmasListas armaDir, armaEsq;
+    ListasEquipamentos capacete, peitoral, luvas, calcas, botas;
 
     public Player(String nome, int[] posicao, Classes classe){
         super(nome, posicao, classe);
@@ -43,9 +50,14 @@ public class Player extends Personagem {
 
         this.equipados = classe.kit.criar();
         //this.inventario =
-    }
-    public void movimentar(int eixoX, int eixoY){
 
+        this.armaDir = classe.kit.armaDir;
+        this.armaEsq = classe.kit.armaEsq;
+        this.capacete = classe.kit.capacete;
+        this.peitoral = classe.kit.peitoral;
+        this.luvas = classe.kit.luvas;
+        this.calcas = classe.kit.calcas;
+        this.botas = classe.kit.botas;
     }
 
     // TESTE DE FUNCIONAMENTO CÓDIGO VIA IA
@@ -81,5 +93,12 @@ public class Player extends Personagem {
         System.out.println("Fé: " + this.fe);
         System.out.println("Arcano: " + this.arcano);
         System.out.println("========================================");
+        System.out.println("Mão direita: "+ (this.armaDir != null ? this.armaDir.getNome() : "Vazio"));
+        System.out.println("Mão esquerda: "+ (this.armaEsq != null ? this.armaEsq.getNome() : "Vazio"));
+        System.out.println("Capacete: "+ (this.capacete != null ? this.capacete.getNome() : "Vazio"));
+        System.out.println("Peitoral: "+ (this.peitoral != null ? this.peitoral.getNome() : "Vazio"));
+        System.out.println("Luvas: "+ (this.luvas != null ? this.luvas.getNome() : "Vazio"));
+        System.out.println("Calças: "+ (this.calcas != null ? this.calcas.getNome() : "Vazio"));
+        System.out.println("Botas: "+ (this.botas != null ? this.botas.getNome() : "Vazio"));
     }
 }

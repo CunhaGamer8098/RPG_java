@@ -48,8 +48,8 @@ public enum KitsPredefinidos {
     AVE_DIVINA_KIT(LANCA_INVERTIDA, null, CAPACETE_SOLITUDE, PEITORAL_SOLITUDE, LUVAS_SOLITUDE, CALCAS_SOLITUDE, BOTAS_SOLITUDE),
     ESQUELETO_KIT(ESPADA_CAVALEIRO, null, null, null, null, null, null);
 
-    private final ArmasListas armaDir, armaEsq;
-    private final ListasEquipamentos capacete, peitoral, luvas, calcas, botas;
+    public final ArmasListas armaDir, armaEsq;
+    public final ListasEquipamentos capacete, peitoral, luvas, calcas, botas;
 
     KitsPredefinidos(ArmasListas armaDir, ArmasListas armaEsq,
                      ListasEquipamentos capacete, ListasEquipamentos peitoral,

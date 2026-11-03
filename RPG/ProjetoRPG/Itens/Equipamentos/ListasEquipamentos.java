@@ -216,4 +216,8 @@ public enum ListasEquipamentos {
         this.tipo_equipamento = equipamento.tipo;
         this.codigo_item = codigo_item;
     }
+    //public Armas espada_longa = new Armas(ArmasListas.ESPADA_LONGA);
+    public String getNome(){
+        return this.nome;
+    }
 }
