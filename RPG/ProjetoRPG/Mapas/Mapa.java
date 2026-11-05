@@ -9,7 +9,7 @@ package Mapas;
     // 6 Portas para outros mapas
     // 7 Casas que estão sofrendo ataque de armas
 
-import Entidades.Entidades;
+import Entidades.Entidade;
 import Entidades.Player.Classes.Player;
 import Entidades.Player.Personagem;
 
@@ -17,7 +17,7 @@ public class Mapa {
     // Mapas serão criados a partir de uma matriz a qual é definida por zeros e 
     // Variável que categoriza o que está na posição do mapa, sendo esse alterado pelo turno
     int quantidade_de_entidades;
-    Entidades[] lista_criaturas_no_mapa;
+    Entidade[] lista_criaturas_no_mapa;
     int[][] mapa_antigo;
     int[][] mapa_atual;
 
@@ -86,14 +86,14 @@ public class Mapa {
             this.mapa_atual[i] = this.mapa_antigo[i].clone();
         }
     }
-    public void adicionarAoMapa(Entidades entidade){
+    public void adicionarAoMapa(Entidade entidade){
         this.quantidade_de_entidades = this.quantidade_de_entidades + 1;
         this.lista_criaturas_no_mapa[this.quantidade_de_entidades-1] = entidade;
     }
     public void posicionarEntidades(){
         for (int i = 0; lista_criaturas_no_mapa.length > i; i++){
             int y = this.lista_criaturas_no_mapa[i].posicao[0];
-            int x = this.lista_criaturas_no_mapa[i].pessoa.posicao[1];
+            int x = this.lista_criaturas_no_mapa[i].posicao[1];
             if (this.mapa_atual[x][y] == 0) {
                 this.mapa_atual[x][y] = 2;
             }
