@@ -1,32 +1,41 @@
 package Itens.Armas;
 
-//ATAQUE 1 (Range: 1 casa da frente e diagonal; Range: 2 duas casas a frente e duas diagonal, pega 5 casas)
-//ATAQUE 2 (Range: 1 pega duas diagonais e casa frente; Range: 2 pega uma diagonal duas casas da frente, e um movimento do cavalo)
-//ATAQUE 3 (Range: 3 pega moveset do rei, pois é um ataque giratório
-//ATAQUE 4 (Range: 1 pega uma casa da frente e duas diagonais ao lado; Range: 2 pega os movimentos ao lado do cavalo duas diagonais cavalo frente-lado, duas frente, um diagonal)
-//ATAQUE 5 (Range: 1 pega frente e duas diagonais)
+// modelo 1 : ataque básico distância de uma casa, ou duas para ataque pesado
+// modelo 2 : ataque básico distância de uma casa, 3 para ataque pesado
+// modelo 3 : ataque com duas casas de distância numa reta, quadrado + 1 para atque pesado
+// modelo 4 : quadrado para ataque leve, área com um de distância para ataque pesado
+// modelo 5 : quina para ataque leve, quadrado mais um para ataque pesado
+// modelo 6 : um de distância para ataque leve, cruz para ataque pesado
+// modelo 7 : um de distância para ambos ataques
+// modelo 8 : capacete de defesa para ataque leve, raio de defesa para ataque pesado ( defesa absoluta)
 
 
 //Revisar os ataques e modelos para fazer mais lógica
+// Padronizar range nos tipos de armas
+
 public enum TipoArmas {
-    ESPADAS(1),
-    MACHADOS(2),
-    MARTELOS(2),
-    KATANAS(1),
-    LANCAS(3),
-    ALABARDAS(3),
-    FOICES(4),
-    PUNHOS(5),
-    CAJADOS(1),
-    SELOS(0),
-    ESCUDOS(5);
+    ESPADAS(1, 1),
+    MACHADOS(1, 1),
+    MARTELOS(1, 1),
+    KATANAS(2, 1),
+    LANCAS(3, 2),
+    ALABARDAS(4, 2),
+    FOICES(5, 1),
+    PUNHOS(6, 1),
+    CAJADOS(7, 1),
+    SELOS(0, 1),
+    ESCUDOS(8, 0);
 
     // COLOCAR NÍVEL DE ARMAS, MODELO DE ATAQUE E DURABILIDADE
     //int nivel;
     int modelo_ataque;
+    // Range, de blocos no mapa;
+    int alcance;
 
 
-    TipoArmas(int modelo_ataque){
+    TipoArmas(int modelo_ataque, int alcance){
         this.modelo_ataque = modelo_ataque;
+        this.alcance = alcance;
+
     }
 }

@@ -20,12 +20,14 @@ public class Mapa {
     Entidade[] lista_criaturas_no_mapa;
     int[][] mapa_antigo;
     int[][] mapa_atual;
+    int[][] mapa_ataque;
 
     public Mapa(TiposDeMapa mapa){
         this.quantidade_de_entidades = 0;
         this.lista_criaturas_no_mapa = null;
         this.mapa_antigo = mapa.matriz;
         this.mapa_atual = new int [20][20];
+        this.mapa_ataque = new int [20][20];
 
     }
     public void desenhar_mapa(){
