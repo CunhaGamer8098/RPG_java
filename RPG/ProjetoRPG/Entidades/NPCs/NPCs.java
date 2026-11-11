@@ -5,6 +5,8 @@ package Entidades.NPCs;
 //import Entidades.NPCs.Lista_Ferreiros;
 //import Entidades.NPCs.Lista_Vendedores;
 
-public abstract class NPCs{
+import Entidades.Entidade;
+
+public abstract class NPCs extends Entidade {
 
 }

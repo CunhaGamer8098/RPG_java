@@ -13,18 +13,23 @@ import Entidades.Entidade;
 import Entidades.Player.Classes.Player;
 import Entidades.Player.Personagem;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class Mapa {
-    // Mapas serão criados a partir de uma matriz a qual é definida por zeros e 
+
+
+    public int[] sortearPosicaoValida;
+    // Mapas serão criados a partir de uma matriz a qual é definida por zeros e
     // Variável que categoriza o que está na posição do mapa, sendo esse alterado pelo turno
     int quantidade_de_entidades;
-    Entidade[] lista_criaturas_no_mapa;
+    ArrayList<Entidade> entidades = new ArrayList<>();;
     int[][] mapa_antigo;
     int[][] mapa_atual;
     int[][] mapa_ataque;
 
     public Mapa(TiposDeMapa mapa){
         this.quantidade_de_entidades = 0;
-        this.lista_criaturas_no_mapa = null;
         this.mapa_antigo = mapa.matriz;
         this.mapa_atual = new int [20][20];
         this.mapa_ataque = new int [20][20];
@@ -55,28 +60,6 @@ public class Mapa {
 
         this.resetarMapa();
 
-        while (this.mapa_atual[y][x] == 1){
-
-            // tenta valores brancos da esquerda e direita
-            if (pessoa.posicao[0]+1<10){
-                pessoa.posicao[0] = pessoa.posicao[0] + 1;
-                y = pessoa.posicao[0];
-            }
-            else {
-                pessoa.posicao[0] = pessoa.posicao[0] - 1;
-                y = pessoa.posicao[0];
-            }
-
-            // tenta valores brancos de cima e baixo
-            if (pessoa.posicao[1]+1<10){
-                pessoa.posicao[1] = pessoa.posicao[1] + 1;
-                x = pessoa.posicao[1];
-            }
-            else {
-                pessoa.posicao[1] = pessoa.posicao[1] - 1;
-                x = pessoa.posicao[0];
-            }
-        }
         if (this.mapa_atual[x][y] == 0) {
             this.mapa_atual[x][y] = 2;
         }
@@ -86,20 +69,62 @@ public class Mapa {
     public void resetarMapa(){
         for (int i = 0; this.mapa_antigo.length > i; i++){
             this.mapa_atual[i] = this.mapa_antigo[i].clone();
+            for (int j = 0; this.mapa_antigo[i].length>j; j++){
+                this.mapa_ataque[i][j] = 0;
+            }
         }
     }
-    public void adicionarAoMapa(Entidade entidade){
-        this.quantidade_de_entidades = this.quantidade_de_entidades + 1;
-        this.lista_criaturas_no_mapa[this.quantidade_de_entidades-1] = entidade;
+    public void adicionarEntidades() {
+
+        if (entidades.isEmpty()) {
+            entidades = new ArrayList<>();
+        }
+        else {
+            for (Entidade e : entidades){
+                entidades.add(e);
+            }
+
+        }
+
     }
     public void posicionarEntidades(){
-        for (int i = 0; lista_criaturas_no_mapa.length > i; i++){
-            int y = this.lista_criaturas_no_mapa[i].posicao[0];
-            int x = this.lista_criaturas_no_mapa[i].posicao[1];
-            if (this.mapa_atual[x][y] == 0) {
-                this.mapa_atual[x][y] = 2;
+        this.resetarMapa();
+        this.adicionarEntidades();
+
+        for (Entidade e : entidades){
+            int novoX = e.posicao[0] + 1;
+            int novoY = e.posicao[1];
+
+            if (posicaoValida(novoX, novoY)) {
+                e.posicao[0] = novoX;
+                e.posicao[1] = novoY;
+                mapa_atual[novoX][novoY] = 2;
             }
             this.desenhar_mapa();
         }
+    }
+    public boolean posicaoValida(int x, int y) {
+
+        if (x < 0 || x >= mapa_atual.length ||
+                y < 0 || y >= mapa_atual[x].length) {
+            return false;
+        }
+
+        return mapa_atual[x][y] != 1;
+    }
+    public int[] sortearPosicaoValida() {
+
+        Random random = new Random();
+
+        int x, y;
+
+        do {
+            x = random.nextInt(mapa_antigo.length);
+            y = random.nextInt(mapa_antigo[x].length);
+
+        } while (mapa_antigo[x][y] != 0 ||
+                mapa_antigo[x][y] != 0);
+
+        return new int[]{x, y};
     }
 }

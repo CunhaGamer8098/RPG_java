@@ -31,10 +31,10 @@ public abstract class Personagem extends Entidade {
         this.posicao[1] = this.posicao[1] - 1;
     }
     public void direita(){
-        this.posicao[0] = this.posicao[0] - 1;
+        this.posicao[0] = this.posicao[0] + 1;
     }
     public void esquerda(){
-        this.posicao[0] = this.posicao[0] + 1;
+        this.posicao[0] = this.posicao[0] - 1;
     }
 
 

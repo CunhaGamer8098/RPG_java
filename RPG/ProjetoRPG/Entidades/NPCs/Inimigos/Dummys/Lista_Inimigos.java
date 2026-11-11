@@ -123,6 +123,7 @@ public enum Lista_Inimigos{
     // DRAGONKIN_SOLDIER("Dragonkin Soldier", 14797, 354, 0, 130, 117, 73069, 0,1);
 
 
+
     String nome;
     int vida, dano_fisico, dano_magico, defesa_fisica, defesa_magica, exp_drop;
     float drop_rate;

@@ -4,8 +4,9 @@ import Itens.Armas.ArmasListas;
 import Itens.Equipados;
 import Itens.Equipamentos.ListasEquipamentos;
 
-public class Player extends Personagem {
+import java.util.ArrayList;
 
+public class Player extends Personagem {
     // Atributos de Utilidade
     protected int vigor;
     protected int mente;
@@ -101,4 +102,5 @@ public class Player extends Personagem {
         System.out.println("Calças: "+ (this.calcas != null ? this.calcas.getNome() : "Vazio"));
         System.out.println("Botas: "+ (this.botas != null ? this.botas.getNome() : "Vazio"));
     }
+
 }
